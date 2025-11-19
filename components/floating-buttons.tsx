@@ -3,9 +3,10 @@
 import { Button } from "@/components/ui/button"
 import { Phone, Mail } from "lucide-react"
 
-export default function FloatingButtons() { ... }
+export default function FloatingButtons() {
   return (
     <div className="fixed bottom-6 right-6 z-40 flex flex-col space-y-3">
+      {/* Email Button */}
       <Button
         size="lg"
         className="bg-primary hover:bg-primary/90 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-full w-14 h-14 p-0 md:w-auto md:h-auto md:px-4 md:py-3 md:rounded-lg"
