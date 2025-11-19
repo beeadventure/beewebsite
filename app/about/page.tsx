@@ -1,6 +1,6 @@
 "use client"
 
-import { Header } from "@/components/header"
+import Header from "@/components/header"
 import FloatingButtons from "@/components/floating-buttons"
 import Image from "next/image"
 
