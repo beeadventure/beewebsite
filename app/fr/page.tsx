@@ -1,9 +1,9 @@
-import Header from "@/components/header"
-import HeroFr from "@/components/fr/hero"
-import ToursFr from "@/components/fr/tours"
-import AboutFr from "@/components/fr/about"
-import ContactFr from "@/components/fr/contact"
-import FloatingButtons from "@/components/floating-buttons"
+import Header from "@/app/components/header"
+import HeroFr from "@/app/components/fr/hero"
+import ToursFr from "@/app/components/fr/tours"
+import AboutFr from "@/app/components/fr/about"
+import ContactFr from "@/app/components/fr/contact"
+import FloatingButtons from "@/app/components/floating-buttons"
 
 export default function HomeFr() {
   return (
