@@ -1,7 +1,8 @@
 "use client"
 
-import Header from "@/components/header"
-import FloatingButtons from "@/components/floating-buttons"
+import Header from "@/components/header.tsx"
+import FloatingButtons from "@/components/floating-buttons.tsx"
+
 import Image from "next/image"
 
 export default function AboutPage() {
