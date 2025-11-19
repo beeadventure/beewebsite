@@ -1,7 +1,6 @@
-import Header from "@/components/header"
-import FloatingButtons from "@/components/floating-buttons"
+import Header from "@/app/components/header"
+import FloatingButtons from "@/app/components/floating-buttons"
 import Image from "next/image"
-
 
 export default function AboutPage() {
   return (
