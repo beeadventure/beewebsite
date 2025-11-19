@@ -1,7 +1,7 @@
 "use client"
 
-import Header from "@/components/header.tsx"
-import FloatingButtons from "@/components/floating-buttons.tsx"
+import Header from "@/components/header"
+import FloatingButtons from "@/components/floating-buttons"
 
 import Image from "next/image"
 
