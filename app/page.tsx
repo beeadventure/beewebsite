@@ -1,9 +1,9 @@
-import { Header } from "@/components/header"
-import { Hero } from "@/components/hero"
-import { Tours } from "@/components/tours"
-import { About } from "@/components/about"
-import { Contact } from "@/components/contact"
-import { FloatingButtons } from "@/components/floating-buttons"
+import Header from "@/components/Header"
+import HeroFr from "@/components/fr/Hero"
+import ToursFr from "@/components/fr/Tours"
+import AboutFr from "@/components/fr/About"
+import ContactFr from "@/components/fr/Contact"
+import FloatingButtons from "@/components/FloatingButtons"
 
 export default function Home() {
   return (
