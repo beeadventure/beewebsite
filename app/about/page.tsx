@@ -1,5 +1,5 @@
-import { Header } from "@/components/header"
-import { FloatingButtons } from "@/components/floating-buttons"
+import Header from "@/components/header"
+import FloatingButtons from "@/components/floating-buttons"
 import Image from "next/image"
 
 export default function AboutPage() {
@@ -7,6 +7,7 @@ export default function AboutPage() {
     <div className="min-h-screen bg-background">
       <Header />
       <FloatingButtons />
+
 
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-b from-primary/5 to-background">
