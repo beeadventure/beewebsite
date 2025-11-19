@@ -1,5 +1,5 @@
-import Header from "@/components/header"
-import FloatingButtons from "@/components/floating-buttons"
+import Header from "@/components/header.tsx"
+import FloatingButtons from "@/components/floating-buttons.tsx"
 
 import HeroFr from "@/components/fr/hero-fr"
 import ToursFr from "@/components/fr/tours-fr"
