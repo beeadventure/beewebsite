@@ -1,6 +1,9 @@
-import Header from "@/components/Header"
-import FloatingButtons from "@/components/FloatingButtons"
-import Image from "next/image"
+import Header from "@/components/header"
+import HeroFr from "@/components/fr/hero"
+import ToursFr from "@/components/fr/tours"
+import AboutFr from "@/components/fr/about"
+import ContactFr from "@/components/fr/contact"
+import FloatingButtons from "@/components/floating-buttons"
 
 export default function AboutPage() {
   return (
