@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Phone, Mail, MapPin, Facebook } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
-export function ContactFr() {
+export default function ContactFr() {
   return (
     <section id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-4">
@@ -16,18 +16,23 @@ export function ContactFr() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          {/* Phone */}
           <Card className="hover:shadow-lg transition-shadow">
             <CardContent className="p-6 text-center">
               <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Phone className="w-6 h-6 text-primary" />
               </div>
               <h3 className="font-semibold mb-2">Téléphone</h3>
-              <a href="tel:+66838087798" className="text-muted-foreground hover:text-primary transition-colors">
+              <a
+                href="tel:+66838087798"
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
                 +66838087798
               </a>
             </CardContent>
           </Card>
 
+          {/* Email */}
           <Card className="hover:shadow-lg transition-shadow">
             <CardContent className="p-6 text-center">
               <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -43,6 +48,7 @@ export function ContactFr() {
             </CardContent>
           </Card>
 
+          {/* Facebook */}
           <Card className="hover:shadow-lg transition-shadow">
             <CardContent className="p-6 text-center">
               <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -60,13 +66,17 @@ export function ContactFr() {
             </CardContent>
           </Card>
 
+          {/* Location */}
           <Card className="hover:shadow-lg transition-shadow">
             <CardContent className="p-6 text-center">
               <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <MapPin className="w-6 h-6 text-primary" />
               </div>
               <h3 className="font-semibold mb-2">Emplacement</h3>
-              <p className="text-muted-foreground text-sm">Ban Thung Lung Mae Win Mae Wang Chiang Mai 50360</p>
+              <p className="text-muted-foreground text-sm">
+                Ban Thung Lung Mae Win<br />
+                Mae Wang — Chiang Mai 50360
+              </p>
             </CardContent>
           </Card>
         </div>
