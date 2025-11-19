@@ -1,5 +1,8 @@
+"use client"
+
 import { Header } from "@/components/header"
-import { FloatingButtons } from "@/components/floating-buttons"
+import FloatingButtons from "@/components/floating-buttons"
+import Image from "next/image"
 
 export default function AboutPage() {
   return (
@@ -7,12 +10,13 @@ export default function AboutPage() {
       <Header />
       <FloatingButtons />
 
-
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-b from-primary/5 to-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">About Our Community</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
+              About Our Community
+            </h1>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
               Discover the rich history and vibrant culture of Thung Luang Village, home to over 300 years of Karen
               heritage in the heart of Chiang Mai's mountains.
@@ -175,77 +179,3 @@ export default function AboutPage() {
                   className="object-cover"
                 />
               </div>
-              <div className="bg-background rounded-2xl p-8 shadow-sm">
-                <h3 className="text-2xl font-semibold text-foreground mb-4">Traditional Attire</h3>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  Men of Thung Luang village generally dress like lowland or city dwellers. However, on important
-                  festivals, they wear traditional tribal attire, including a red handwoven shirt and black khaki pants.
-                </p>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  Karen men distinguish between married and unmarried men by wearing a sarong. A patterned sarong called
-                  "taetua kee" is for married men, while a red sarong called "taet a dok ngo" is for unmarried men.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  Women's sarongs are adorned with patterns and beads, stitched into the woven fabric, showcasing
-                  intricate craftsmanship passed down through generations.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Knowledge Transmission Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-foreground mb-6">Preserving Our Heritage</h2>
-            <div className="bg-primary/5 rounded-2xl p-8 md:p-12">
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Traditional knowledge transmission and organizational arrangements can be divided into two levels: the
-                family and kinship level and the community level.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Knowledge transmission at the family and kinship level involves daily life and family rituals. Community
-                knowledge transmission involves various rituals and community-level production activities.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                In Thung Luang Village, the Royal Project initiated a new agricultural plan in 1987, which resulted in
-                the evolution of traditional farming practices, balancing heritage with sustainable modern agriculture.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="py-16 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">Experience Our Culture</h2>
-            <p className="text-lg mb-8 opacity-90">
-              Join us for an authentic journey through Karen heritage, where every tour supports our community and helps
-              preserve our traditions for future generations.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/"
-                className="inline-flex items-center justify-center px-8 py-3 bg-background text-foreground rounded-lg font-semibold hover:bg-background/90 transition-colors"
-              >
-                View Our Tours
-              </a>
-              <a
-                href="https://wa.me/66838087798"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors"
-              >
-                Contact Us on WhatsApp
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  )
-}
