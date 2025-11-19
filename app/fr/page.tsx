@@ -6,7 +6,6 @@ import ToursFr from "@/components/fr/tours-fr"
 import AboutFr from "@/components/fr/about-fr"
 import ContactFr from "@/components/fr/contact-fr"
 
-
 export default function HomeFr() {
   return (
     <main className="min-h-screen">
