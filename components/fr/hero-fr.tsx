@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 
-export function HeroFr() {
+export default function HeroFr() {
   const scrollToTours = () => {
     document.getElementById("tours")?.scrollIntoView({ behavior: "smooth" })
   }
@@ -29,10 +29,13 @@ export function HeroFr() {
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-balance text-white">
           Découvrez la Magie de <span className="text-white">Chiang Mai</span>
         </h1>
-        <p className="text-lg md:text-xl lg:text-2xl mb-8 text-balance leading-relaxed max-w-3xl mx-auto text-white">
-          Rejoignez-nous pour des aventures authentiques avec des guides locaux experts. Découvrez les éléphants, les
-          cascades, les temples anciens et le véritable esprit de la Thaïlande du Nord.
+
+        <p className="text-lg md:text-xl lg:text-2xl mb-8 leading-relaxed max-w-3xl mx-auto text-white">
+          Rejoignez-nous pour des aventures authentiques avec des guides locaux experts. 
+          Découvrez les éléphants, les cascades, les temples anciens et le véritable esprit 
+          de la Thaïlande du Nord.
         </p>
+
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button
             size="lg"
@@ -42,6 +45,7 @@ export function HeroFr() {
             <span>Réservez Votre Aventure</span>
             <ArrowRight className="w-5 h-5" />
           </Button>
+
           <Link href="/about">
             <Button
               variant="outline"
