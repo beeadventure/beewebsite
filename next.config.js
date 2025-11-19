@@ -3,13 +3,13 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
 
-  // ✅ Add recommended build optimizations for Vercel
+  // Recommended build optimizations for Vercel
   output: "standalone",
   poweredByHeader: false,
   compress: true,
   productionBrowserSourceMaps: false,
 
-  // ✅ Add image settings
+  // Image settings
   images: {
     domains: [
       "v0-jaidee-tour-website.vercel.app",
@@ -19,12 +19,10 @@ const nextConfig = {
     formats: ["image/avif", "image/webp"],
   },
 
-  // ✅ Recommended experimental flag (safe)
-  experimental: {
-    serverActions: true,
-  },
+  // ❌ REMOVE experimental.serverActions (BREAKS NEXT 14)
+  // experimental: {},
 
-  // ✅ Ensure lint and types don’t block builds
+  // Ensure lint and types don’t block builds
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -32,7 +30,7 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
 
-  // ✅ Recommended for better caching and asset handling
+  // Caching and asset handling
   assetPrefix: "",
   trailingSlash: false,
 };
