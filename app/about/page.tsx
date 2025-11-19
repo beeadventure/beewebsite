@@ -1,5 +1,5 @@
-import Header from "@/components/header"
-import FloatingButtons from "@/components/floating-buttons"
+import { Header } from "@/components/header"
+import { FloatingButtons } from "@/components/floating-buttons"
 
 export default function AboutPage() {
   return (
