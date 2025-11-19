@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Phone, Mail } from "lucide-react"
 
-export function FloatingButtons() {
+export default function FloatingButtons() { ... }
   return (
     <div className="fixed bottom-6 right-6 z-40 flex flex-col space-y-3">
       <Button
