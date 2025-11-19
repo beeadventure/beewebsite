@@ -1,13 +1,14 @@
 "use client"
 
+import { useState } from "react"
+import Image from "next/image"
+
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Clock, Users, MapPin } from "lucide-react"
-import Image from "next/image"
-import { useState } from "react"
-import { BookingFormDialog } from "@/components/booking-form-dialog"
+import BookingFormDialog from "@/components/booking-form-dialog"
 
-export function ToursFr() {
+export default function ToursFr() {
   const [isDialogOpen, setIsDialogOpen] = useState(false)
   const [selectedTour, setSelectedTour] = useState<string>("")
 
@@ -32,20 +33,23 @@ export function ToursFr() {
       price: "฿3,600 / personne",
       childPrice: "",
       pricingNote: "4 à 8 personnes",
-      smallGroupNote: "1 – 3 pax n'hésitez pas à me contacter pour faire la meilleure offre pour vous",
+      smallGroupNote:
+        "1 – 3 pax n'hésitez pas à me contacter pour faire la meilleure offre pour vous",
       includes: [
         "Sanctuaire d'éléphants : Profitez du bain et de nourrir les éléphants",
         "Temple : Visite de Wat Phra Sri Somdej",
-        "Trekking environ 1 heure (déjeuner) · Profitez des activités agricoles saisonnières avec les gens des tribus",
-        "Arrivée au séjour chez l'habitant · préparation du dîner · temps de détente",
+        "Trekking environ 1 heure + déjeuner",
+        "Activités agricoles saisonnières avec les habitants",
+        "Dîner + nuit chez l'habitant",
         "Activité nocturne",
-        "8h00–8h40 : Réveil · Petit déjeuner",
-        "Amusez-vous avec les étudiants",
-        "Cascade Mae Sapok & rafraîchissez-vous",
+        "Petit-déjeuner + activités locales",
+        "Cascade Mae Sapok",
         "Rafting en bambou Mae Win",
       ],
-      included: "Déjeuner, Dîner & Petit-déjeuner · Guide touristique · Transport · Frais d'entrée · Assurance",
+      included:
+        "Déjeuner, Dîner & Petit-déjeuner · Guide touristique · Transport · Frais d'entrée · Assurance",
     },
+
     {
       title: "Trekking d'une Journée Complète",
       images: [
@@ -61,16 +65,19 @@ export function ToursFr() {
       price: "฿2,600 / personne",
       childPrice: "",
       pricingNote: "4 à 8 personnes",
-      smallGroupNote: "1 – 3 pax n'hésitez pas à me contacter pour faire la meilleure offre pour vous",
+      smallGroupNote:
+        "1 – 3 pax n'hésitez pas à me contacter pour faire la meilleure offre pour vous",
       includes: [
-        "Sanctuaire d'éléphants : Profitez du bain et de nourrir les éléphants",
-        "Temple : Visite de Wat Phra Sri Somdej",
-        "Village Karen : Village de Ban Thung Lung",
-        "Cascade Mae Sapok & rafraîchissez-vous",
+        "Sanctuaire d'éléphants",
+        "Temple Wat Phra Sri Somdej",
+        "Village Karen Ban Thung Lung",
+        "Cascade Mae Sapok",
         "Rafting en bambou Mae Win",
       ],
-      included: "Déjeuner · Guide touristique · Transport · Frais d'entrée · Assurance",
+      included:
+        "Déjeuner · Guide touristique · Transport · Frais d'entrée · Assurance",
     },
+
     {
       title: "Visite Complète de la Cascade Collante",
       images: [
@@ -86,13 +93,14 @@ export function ToursFr() {
       price: "฿2,800 / personne",
       childPrice: "",
       pricingNote: "4 à 8 personnes",
-      smallGroupNote: "1 – 3 pax n'hésitez pas à me contacter pour faire la meilleure offre pour vous",
+      smallGroupNote:
+        "1 – 3 pax n'hésitez pas à me contacter pour faire la meilleure offre pour vous",
       includes: [
         "Lever de soleil au Doi Suthep",
         "Wat Pha Lat",
-        "Profitez du magnifique paysage au lac Huay Tueng Thao",
+        "Lac Huay Tueng Thao",
         "Déjeuner + eau",
-        "Profitez de la Cascade Collante et rafraîchissez-vous",
+        "Cascade Collante",
         "Temple Ban Den",
       ],
       included: "Prise en charge et retour à votre hébergement",
@@ -103,51 +111,58 @@ export function ToursFr() {
     <section id="tours" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Nos Circuits</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+            Nos Circuits
+          </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Choisissez parmi nos circuits soigneusement conçus pour une expérience inoubliable
           </p>
         </div>
 
+        {/* TOUR CARDS GRID */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {tours.map((tour, index) => (
             <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
+              {/* IMAGES GRID */}
               <div className={`grid ${tour.images.length === 6 ? "grid-cols-3" : "grid-cols-2"} gap-1 p-1`}>
                 {tour.images.map((img, imgIndex) => (
                   <div key={imgIndex} className="relative h-32">
                     <Image
-                      src={img || "/placeholder.svg"}
-                      alt={`${tour.title} ${imgIndex + 1}`}
+                      src={img}
+                      alt={`${tour.title} image ${imgIndex + 1}`}
                       fill
                       className="object-cover rounded"
                     />
                   </div>
                 ))}
               </div>
+
+              {/* CONTENT */}
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-4">{tour.title}</h3>
 
                 <div className="space-y-3 mb-4">
                   <div className="flex items-center text-sm text-muted-foreground">
                     <Clock className="w-4 h-4 mr-2" />
-                    <span>
-                      Prise en charge: {tour.pickup} | Retour: {tour.return}
-                    </span>
+                    <span>Prise en charge: {tour.pickup} | Retour: {tour.return}</span>
                   </div>
+
                   <div className="flex items-start text-sm">
-                    <Users className="w-4 h-4 mr-2 mt-1 text-primary flex-shrink-0" />
-                    <div className="flex-1">
+                    <Users className="w-4 h-4 mr-2 mt-1 text-primary" />
+                    <div>
                       <div className="font-semibold">
                         {tour.pricingNote} / {tour.price}
                       </div>
-                      {tour.childPrice && <div className="text-muted-foreground">{tour.childPrice}</div>}
                       {tour.smallGroupNote && (
-                        <div className="mt-1 text-xs text-muted-foreground italic">** {tour.smallGroupNote}</div>
+                        <div className="text-xs text-muted-foreground italic mt-1">
+                          ** {tour.smallGroupNote}
+                        </div>
                       )}
                     </div>
                   </div>
                 </div>
 
+                {/* INCLUDES LIST */}
                 <div className="mb-4">
                   <h4 className="font-semibold mb-2">Votre Circuit Comprend</h4>
                   <ul className="space-y-1 text-sm text-muted-foreground">
@@ -160,11 +175,10 @@ export function ToursFr() {
                   </ul>
                 </div>
 
-                <div className="mb-4 p-3 bg-muted rounded-lg">
-                  <p className="text-sm">
-                    <MapPin className="w-4 h-4 inline mr-1 text-primary" />
-                    <strong>Inclus:</strong> {tour.included}
-                  </p>
+                {/* INCLUDED */}
+                <div className="mb-4 p-3 bg-muted rounded-lg text-sm">
+                  <MapPin className="w-4 h-4 inline mr-1 text-primary" />
+                  <strong>Inclus:</strong> {tour.included}
                 </div>
 
                 <Button className="w-full" onClick={() => handleBookNow(tour.title)}>
@@ -181,7 +195,12 @@ export function ToursFr() {
           </p>
         </div>
       </div>
-      <BookingFormDialog open={isDialogOpen} onOpenChange={setIsDialogOpen} tourTitle={selectedTour} />
+
+      <BookingFormDialog
+        open={isDialogOpen}
+        onOpenChange={setIsDialogOpen}
+        tourTitle={selectedTour}
+      />
     </section>
   )
 }
